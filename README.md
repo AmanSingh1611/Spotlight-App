@@ -1,50 +1,105 @@
-# Welcome to your Expo app 👋
+# 🌟 Spotlight
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Spotlight is a social media platform built with **React Native**, designed to let users **post, comment, and follow each other**.  
+It provides a smooth mobile-first experience with **Clerk authentication** and **Convex backend services**.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
+- 🔐 **User Authentication**  
+  - Secure login/signup using **Clerk** (supports Gmail & other providers).  
+
+- 📝 **Posts & Comments**  
+  - Users can create posts and interact by commenting.  
+
+- 👥 **Follow System**  
+  - Follow/unfollow users to build your own feed.  
+
+- ⚡ **Real-time Backend**  
+  - Powered by **Convex** for scalable, reactive backend services.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [React Native](https://reactnative.dev/)  
+- **Authentication**: [Clerk](https://clerk.com/)  
+- **Backend**: [Convex](https://convex.dev/)  
+- **Navigation**: [React Navigation](https://reactnavigation.org/)  
+- **State Management**: React Hooks / Context 
+
+---
+
+
+## 🔧 Setup & Installation
+
+1. Clone the repository:
    ```bash
-   npm install
+   git clone https://github.com/your-username/spotlight.git
+   cd spotlight
    ```
 
-2. Start the app
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
+3. Configure **Clerk**:
+   - Create a Clerk project at [Clerk Dashboard](https://dashboard.clerk.com/).
+   - Get your **Frontend API key** and add it to your `.env` file:
+     ```env
+     EXPO_PUBLIC_CLERK_FRONTEND_API=<your-clerk-key>
+     ```
+
+4. Configure **Convex**:
+   - Create a Convex project:  
+     ```bash
+     npx convex dev
+     ```
+   - Copy your Convex deployment URL into `.env`:
+     ```env
+     EXPO_PUBLIC_CONVEX_URL=<your-convex-url>
+     ```
+
+5. Run the app:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📱 Screens (planned/implemented)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Login / Signup** (Clerk-powered auth)  
+- **Home Feed** (View posts from followed users)  
+- **Profile** (User details, posts, followers/following)  
+- **Post Detail** (Comments & interactions)  
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛡️ Security & Authentication
 
-```bash
-npm run reset-project
-```
+- Clerk handles **OAuth with Gmail** for secure sign-in.  
+- All backend services (posts, comments, follows) are validated using **Convex functions**.  
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🤝 Contributing
 
-To learn more about developing your project with Expo, look at the following resources:
+Contributions are welcome!  
+If you’d like to contribute:
+1. Fork the project
+2. Create a new branch (`feature/new-feature`)
+3. Commit changes
+4. Open a Pull Request 🚀
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🙌 Acknowledgements
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Clerk](https://clerk.com/) for authentication  
+- [Convex](https://convex.dev/) for backend services  
+- [React Native](https://reactnative.dev/) for the mobile framework  
