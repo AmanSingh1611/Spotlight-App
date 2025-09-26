@@ -42,7 +42,7 @@ export const getUserByClerkId = query({
       .query("users")
       .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
       .unique();
-
+    console.log("server identity", await ctx.auth.getUserIdentity());
     return user;
   },
 });
